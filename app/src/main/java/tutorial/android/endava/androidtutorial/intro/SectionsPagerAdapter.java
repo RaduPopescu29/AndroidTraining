@@ -7,6 +7,9 @@ package tutorial.android.endava.androidtutorial.intro;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.view.View;
+
+import tutorial.android.endava.androidtutorial.R;
 
 /**
  * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
@@ -14,34 +17,44 @@ import android.support.v4.app.FragmentPagerAdapter;
  */
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
+    public static final int PAGE_COUNT = 3;
+
     public SectionsPagerAdapter(FragmentManager fm) {
         super(fm);
     }
 
     @Override
     public Fragment getItem(int position) {
-        // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
-        return PlaceholderFragment.newInstance(position + 1);
+        switch (position) {
+            case 0:
+                return PlaceholderFragment.newInstance(R.drawable.ic_slide_1,
+                        R.string.welcome_title,
+                        R.string.welcome_message);
+            case 1:
+                return PlaceholderFragment.newInstance(R.drawable.ic_slide_2,
+                        R.string.slide_title_2,
+                        R.string.slide_text_2);
+            case 2:
+                return PlaceholderFragment.newInstance(R.drawable.ic_slide_3,
+                        R.string.slide_title_3,
+                        R.string.slide_text_3);
+        }
+
+        return null;
     }
 
     @Override
     public int getCount() {
         // Show 3 total pages.
-        return 3;
+        return PAGE_COUNT;
     }
 
     @Override
-    public CharSequence getPageTitle(int position) {
-        switch (position) {
-            case 0:
-                return "SECTION 1";
-            case 1:
-                return "SECTION 2";
-            case 2:
-                return "SECTION 3";
+    public boolean isViewFromObject(View view, Object object) {
+        if (object instanceof PlaceholderFragment){
+            view.setTag(((PlaceholderFragment)object).getIndex());
         }
-        return null;
+        return super.isViewFromObject(view, object);
     }
 
 }

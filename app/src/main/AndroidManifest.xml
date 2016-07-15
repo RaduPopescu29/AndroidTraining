@@ -18,11 +18,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".intro.MenuActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".chapter_list.ListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".chapter_list.BadListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".chapter_activties.ActivitiesActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
