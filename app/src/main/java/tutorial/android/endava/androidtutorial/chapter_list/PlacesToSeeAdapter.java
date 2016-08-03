@@ -1,6 +1,12 @@
 package tutorial.android.endava.androidtutorial.chapter_list;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +14,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
 import tutorial.android.endava.androidtutorial.R;
@@ -15,19 +24,20 @@ import tutorial.android.endava.androidtutorial.R;
 /**
  * Created by radpopescu on 7/14/2016.
  */
-public class PersonAdapter extends ArrayAdapter<Person> {
+public class PlacesToSeeAdapter extends ArrayAdapter<Destination> {
 
 
     private LayoutInflater mInflater;
 
-    public PersonAdapter(Context context, ArrayList<Person> list) {
-        super(context, R.layout.item_list_person, list);
+    public PlacesToSeeAdapter(Context context, ArrayList<Destination> list) {
+        super(context, R.layout.item_list_destination, list);
         mInflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     /**
      * How many items are in the data set represented by this Adapter.
+     *
      * @return Count of items.
      */
     @Override
@@ -57,20 +67,23 @@ public class PersonAdapter extends ArrayAdapter<Person> {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder;
         if (convertView == null) {
-            convertView = mInflater.inflate(R.layout.item_list_person, parent, false);
+            convertView = mInflater.inflate(R.layout.item_list_destination, parent, false);
             viewHolder = new ViewHolder();
             viewHolder.imageView = (ImageView) convertView.findViewById(R.id.image_view);
-            viewHolder.nameView = (TextView) convertView.findViewById(R.id.name_view);
-            viewHolder.companyView = (TextView) convertView.findViewById(R.id.company_view);
-            viewHolder.positionView = (TextView) convertView.findViewById(R.id.position_view);
+            viewHolder.destinationNameView = (TextView) convertView.findViewById(R.id.destination_name_view);
+            viewHolder.destinationTimeView = (TextView) convertView.findViewById(R.id.time_view);
+            viewHolder.destinationLocationView = (TextView) convertView.findViewById(R.id.location_view);
+            viewHolder.destinationDetailsView = (TextView) convertView.findViewById(R.id.description_view);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        Person person = getItem(position);
-        viewHolder.nameView.setText(person.getName());
-        viewHolder.companyView.setText(person.getCompanyName());
-        viewHolder.positionView.setText(person.getPosition());
+        Destination destination = getItem(position);
+        viewHolder.destinationNameView.setText(destination.getDestinationName());
+        viewHolder.destinationTimeView.setText(destination.getDestinationTime());
+        viewHolder.destinationLocationView.setText(destination.getLocation());
+        Picasso.with(getContext()).load(destination.getImageUrl()).placeholder(R.drawable.ic_placeholder).into(viewHolder.imageView);
+        viewHolder.destinationDetailsView.setText(destination.getDestinationDetails());
         return convertView;
     }
 
@@ -81,9 +94,9 @@ public class PersonAdapter extends ArrayAdapter<Person> {
      */
     static class ViewHolder {
         public ImageView imageView;
-        public TextView nameView;
-        public TextView companyView;
-        public TextView positionView;
+        public TextView destinationNameView;
+        public TextView destinationTimeView;
+        public TextView destinationLocationView;
+        public TextView destinationDetailsView;
     }
-
 }
