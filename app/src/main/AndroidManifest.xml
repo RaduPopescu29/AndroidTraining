@@ -31,6 +31,14 @@
         <activity
             android:name=".chapter_activties.ActivitiesActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".chapter_layouts.PostcardActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".chapter_layouts.PostcardDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
     </application>
 
 </manifest>

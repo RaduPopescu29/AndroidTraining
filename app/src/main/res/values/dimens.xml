@@ -13,4 +13,12 @@
     <dimen name="message_size">12sp</dimen>
     <dimen name="app_bar_height">300dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+
+    <!-- postcard details -->
+    <dimen name="postcard_margin_strip_size">8dp</dimen>
+    <dimen name="postcard_content_margin_start">20dp</dimen>
+    <dimen name="postcard_content_margin_end">20dp</dimen>
+    <dimen name="postcard_button_height">35dp</dimen>
+    <dimen name="postcard_padding_start_end">10dp</dimen>
+    <dimen name="postcard_padding_top_bottom">20dp</dimen>
 </resources>

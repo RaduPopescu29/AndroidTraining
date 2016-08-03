@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#2B3B46</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorButton">#1D92CA</color>
+
+    <color name="colorPostcardBackground">#E0D9C7</color>
 </resources>
