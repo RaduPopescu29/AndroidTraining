@@ -12,10 +12,12 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- simple linear layout -->
+
         <LinearLayout
             android:id="@+id/postcard_item_1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/postcard_item_height"
             android:layout_margin="10dp"
             android:background="@android:color/white"
             android:gravity="center_vertical"
@@ -42,10 +44,11 @@
 
         </LinearLayout>
 
+        <!-- relative layout with some complexity -->
         <RelativeLayout
             android:id="@+id/postcard_item_2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/postcard_item_height"
             android:padding="10dp">
 
             <LinearLayout
@@ -76,39 +79,18 @@
 
             </LinearLayout>
 
-            <!-- top margin -->
-            <View
+            <include
+                layout="@layout/layout_postcard_margins"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/postcard_margin_strip_size"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/postcard_top_bottom" />
+                android:layout_height="match_parent" />
 
-            <!-- bottom margin -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/postcard_margin_strip_size"
-                android:layout_alignParentBottom="true"
-                android:background="@drawable/postcard_top_bottom" />
-
-            <!-- left margin -->
-            <View
-                android:layout_width="@dimen/postcard_margin_strip_size"
-                android:layout_height="match_parent"
-                android:layout_alignParentStart="true"
-                android:background="@drawable/postcard_right_left" />
-
-            <!-- right margin -->
-            <View
-                android:layout_width="@dimen/postcard_margin_strip_size"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:background="@drawable/postcard_right_left" />
         </RelativeLayout>
 
+        <!-- more complex releative layout -->
         <RelativeLayout
             android:id="@+id/postcard_item_3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/postcard_item_height"
             android:padding="10dp">
 
             <RelativeLayout
@@ -148,33 +130,10 @@
 
             </RelativeLayout>
 
-            <!-- top margin -->
-            <View
+            <include
+                layout="@layout/layout_postcard_margins"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/postcard_margin_strip_size"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/postcard_top_bottom" />
-
-            <!-- bottom margin -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/postcard_margin_strip_size"
-                android:layout_alignParentBottom="true"
-                android:background="@drawable/postcard_top_bottom" />
-
-            <!-- left margin -->
-            <View
-                android:layout_width="@dimen/postcard_margin_strip_size"
-                android:layout_height="match_parent"
-                android:layout_alignParentStart="true"
-                android:background="@drawable/postcard_right_left" />
-
-            <!-- right margin -->
-            <View
-                android:layout_width="@dimen/postcard_margin_strip_size"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:background="@drawable/postcard_right_left" />
+                android:layout_height="match_parent" />
         </RelativeLayout>
 
     </LinearLayout>

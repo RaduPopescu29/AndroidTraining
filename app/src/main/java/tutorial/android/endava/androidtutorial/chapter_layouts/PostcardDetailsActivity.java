@@ -3,10 +3,15 @@ package tutorial.android.endava.androidtutorial.chapter_layouts;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import tutorial.android.endava.androidtutorial.R;
 
+/**
+ * Created by amihaescu on 2/8/2016.
+ */
 public class PostcardDetailsActivity extends AppCompatActivity {
 
     @Override

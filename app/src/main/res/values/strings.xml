@@ -4,7 +4,7 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="first_chapter_text">Project Structure</string>
     <string name="second_chapter_text">Activities</string>
-    <string name="third_chapter_text">Layouts</string>
+    <string name="third_chapter_text">Postcards</string>
     <string name="fourth_chapter_text">Places to see</string>
     <string name="fifth_chapter_text">Tourist Traps</string>
     <string name="sixth_chapter_text">Intents</string>

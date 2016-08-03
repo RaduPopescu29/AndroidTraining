@@ -11,7 +11,8 @@
 
     <dimen name="title_size">18sp</dimen>
     <dimen name="message_size">12sp</dimen>
-    <dimen name="app_bar_height">300dp</dimen>
+    <dimen name="app_bar_height">200dp</dimen>
+    <dimen name="details_app_bar_height">350dp</dimen>
     <dimen name="text_margin">16dp</dimen>
     <dimen name="destination_image_width">180dp</dimen>
     <dimen name="destination_image_height">125dp</dimen>
@@ -19,6 +20,9 @@
     <dimen name="drawable_padding">5dp</dimen>
     <dimen name="margin_left">5dp</dimen>
     <dimen name="item_padding">3dp</dimen>
+
+    <!-- postcards -->
+    <dimen name="postcard_item_height">120dp</dimen>
 
     <!-- postcard details -->
     <dimen name="postcard_margin_strip_size">8dp</dimen>
