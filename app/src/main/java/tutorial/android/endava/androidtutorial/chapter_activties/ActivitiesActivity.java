@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -18,17 +19,12 @@ import tutorial.android.endava.androidtutorial.R;
 public class ActivitiesActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = ActivitiesActivity.class.getSimpleName();
-    private TextView mCreateTitleView;
-    private TextView mCreateDescriptionView;
-    private TextView mStartTitleView;
-    private TextView mStartDescriptionView;
-    private TextView mResumeTitleView;
-    private TextView mResumeDescriptionView;
-    private TextView mPauseTitleView;
-    private TextView mPauseDescriptionView;
-    private TextView mStopTitleView;
-    private TextView mStopDescriptionView;
-    private ImageView mTopImageView;
+    public static final String BUNDLE_DATA="bundle_data";
+    private ImageView mCreateView;
+    private ImageView mStartView;
+    private ImageView mResumeView;
+    private ImageView mPauseView;
+    private ImageView mStopView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,16 +32,16 @@ public class ActivitiesActivity extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_activities);
         initViews();
         showLogs("onCreate");
-        mCreateDescriptionView.setVisibility(View.VISIBLE);
-        mCreateTitleView.setVisibility(View.VISIBLE);
+        mCreateView.setVisibility(View.VISIBLE);
+
     }
 
     @Override
     protected void onStart() {
         super.onStart();
         showLogs("onStart");
-        mStartDescriptionView.setVisibility(View.VISIBLE);
-        mStartTitleView.setVisibility(View.VISIBLE);
+        mStartView.setVisibility(View.VISIBLE);
+
 
     }
 
@@ -53,8 +49,7 @@ public class ActivitiesActivity extends AppCompatActivity implements View.OnClic
     protected void onResume() {
         super.onResume();
         showLogs("onResume");
-        mResumeDescriptionView.setVisibility(View.VISIBLE);
-        mResumeTitleView.setVisibility(View.VISIBLE);
+        mResumeView.setVisibility(View.VISIBLE);
     }
 
     @Override
@@ -62,16 +57,14 @@ public class ActivitiesActivity extends AppCompatActivity implements View.OnClic
         super.onPause();
         showLogs("onPause");
         showToast(getString(R.string.pause_activity_toast));
-        mPauseDescriptionView.setVisibility(View.VISIBLE);
-        mPauseTitleView.setVisibility(View.VISIBLE);
+        mPauseView.setVisibility(View.VISIBLE);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
         showLogs("onStop");
-        mStopTitleView.setVisibility(View.VISIBLE);
-        mStopDescriptionView.setVisibility(View.VISIBLE);
+        mStopView.setVisibility(View.VISIBLE);
         showToast(getString(R.string.stop_activity_toast));
     }
 
@@ -92,16 +85,11 @@ public class ActivitiesActivity extends AppCompatActivity implements View.OnClic
     }
 
     private void initViews() {
-        mCreateTitleView = (TextView) findViewById(R.id.create_title_view);
-        mCreateDescriptionView = (TextView) findViewById(R.id.create_description_view);
-        mStartTitleView = (TextView) findViewById(R.id.start_title_view);
-        mStartDescriptionView = (TextView) findViewById(R.id.start_description_view);
-        mResumeTitleView = (TextView) findViewById(R.id.resume_title_view);
-        mResumeDescriptionView = (TextView) findViewById(R.id.resume_description_view);
-        mPauseTitleView = (TextView) findViewById(R.id.pause_title_view);
-        mPauseDescriptionView = (TextView) findViewById(R.id.pause_description_view);
-        mStopTitleView = (TextView) findViewById(R.id.stop_title_view);
-        mStopDescriptionView = (TextView) findViewById(R.id.stop_description_view);
+        mCreateView = (ImageView)findViewById(R.id.create_view);
+        mResumeView = (ImageView)findViewById(R.id.resume_view);
+        mStartView = (ImageView)findViewById(R.id.start_view);
+        mPauseView = (ImageView)findViewById(R.id.pause_view);
+        mStopView = (ImageView)findViewById(R.id.stop_view);
         findViewById(R.id.pause_activity_button).setOnClickListener(this);
     }
 
@@ -117,6 +105,7 @@ public class ActivitiesActivity extends AppCompatActivity implements View.OnClic
 
     private void startPauseActivity() {
         Intent intent = new Intent(this, PauseActivity.class);
+        intent.putExtra(BUNDLE_DATA,"We have paused the snail!!!!");
         startActivity(intent);
     }
 

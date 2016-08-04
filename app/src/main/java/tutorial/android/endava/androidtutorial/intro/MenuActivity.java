@@ -38,7 +38,6 @@ public class MenuActivity extends AppCompatActivity {
         menuList.add(getString(R.string.third_chapter_text));
         menuList.add(getString(R.string.fourth_chapter_text));
         menuList.add(getString(R.string.fifth_chapter_text));
-        menuList.add(getString(R.string.sixth_chapter_text));
         menuList.add(getString(R.string.seventh_chapter_text));
         menuList.add(getString(R.string.eighth_chapter_text));
         menuList.add(getString(R.string.ninth_chapter_text));
@@ -66,7 +65,7 @@ public class MenuActivity extends AppCompatActivity {
                         Intent badListChapterIntent = new Intent(getContext(), TouristTrapActivity.class);
                         startActivity(badListChapterIntent);
                         break;
-                    case 5:
+                    case 4:
                         Intent photographyIntent = new Intent(getContext(), PhotographyActivity.class);
                         startActivity(photographyIntent);
                         break;

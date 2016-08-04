@@ -12,11 +12,12 @@
     <string name="eighth_chapter_text">Travel</string>
     <string name="ninth_chapter_text">Your guides</string>
     <string name="welcome_title">Welcome</string>
-    <string name="welcome_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="welcome_message">Welcome to the easy Beginner\'s guide to Android that will show you how to unleash the power of Android! Every day hundreds of thousands of Android phones and tablets are sold, it\'s the most popular smartphone all over the world.</string>
     <string name="slide_title_2">Android Training 101</string>
-    <string name="slide_text_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="slide_text_2">Here you\'ll find training classes that describe how to accomplish a specific task with code samples you can re-use in your app.The first training guides below teach you the essentials for Android app development. If you\'re a new Android app developer, you should complete each of these classes in order.</string>
     <string name="slide_title_3">Let\'s Begin</string>
-    <string name="slide_text_3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="slide_text_3">The wireless devices are more of a necessity than a luxurious item, making mobile application development training a lucrative sector today.
+The boost in mobile computing adds a unique and novel dimension to the application programming sector.  In fact, it allows the world to be more responsive and connected through a single device as tiny as a smart phone.</string>
     <string name="get_started_button">Get Started</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
     <string name="create_activity_title">Create your activity</string>
