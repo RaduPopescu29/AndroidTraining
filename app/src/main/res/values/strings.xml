@@ -4,7 +4,7 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="first_chapter_text">Project Structure</string>
     <string name="second_chapter_text">Activities</string>
-    <string name="third_chapter_text">Layouts</string>
+    <string name="third_chapter_text">Postcards</string>
     <string name="fourth_chapter_text">Places to see</string>
     <string name="fifth_chapter_text">Tourist Traps</string>
     <string name="sixth_chapter_text">Intents</string>
@@ -503,4 +503,16 @@ The boost in mobile computing adds a unique and novel dimension to the applicati
     <string name="error_creating_file">There was an error accessing the camera</string>
     <string name="toast_permission_denied">You do not have permission to use camera. Change access from Settings</string>
 
+    <!-- postcards details-->
+    <string name="postcard_details_destination">Destination: %s</string>
+    <string name="postcard_details_date">Date: %s</string>
+    <string name="postcard_details_edit_destination">Destination</string>
+    <string name="postcard_details_edit_date">Date</string>
+    <string name="postcard_details_edit_text">Here enter the postcard message.</string>
+    <string name="postcard_details_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="postcard_details_edit">EDIT</string>
+    <string name="postcard_details_delete">DELETE</string>
+    <string name="postcard_details_save">SAVE</string>
+    <string name="postcard_validation_message">Please fill in all the fields!</string>
+    <string name="postcard_confirmation_message">Are you sure you want to discard the filled in data?</string>
 </resources>
