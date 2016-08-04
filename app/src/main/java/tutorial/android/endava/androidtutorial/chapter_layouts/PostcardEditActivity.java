@@ -23,10 +23,12 @@ public class PostcardEditActivity extends AppCompatActivity {
 
     public static final String BUNDLE_POSTCARD_DATA = "postcard_data";
 
-    TextView mPostcardTextView;
-    TextView mDestinationTextView;
-    TextView mDateTextView;
-    Button mSaveBtn;
+    private TextView mPostcardTextView;
+    private TextView mDestinationTextView;
+    private TextView mDateTextView;
+    private Button mSaveBtn;
+
+    private PostCard mPostcard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,22 @@ public class PostcardEditActivity extends AppCompatActivity {
         setContentView(R.layout.activity_postcard_edit);
 
         initViews();
+        initData();
+        displayData();
+    }
+
+    private void initData() {
+        if (getIntent() != null && getIntent().getExtras() != null) {
+            mPostcard = (PostCard) getIntent().getExtras().getSerializable(BUNDLE_POSTCARD_DATA);
+        } else {
+            mPostcard = new PostCard();
+        }
+    }
+
+    private void displayData() {
+        mPostcardTextView.setText(mPostcard.getText());
+        mDateTextView.setText(mPostcard.getDate());
+        mDestinationTextView.setText(mPostcard.getDestination());
     }
 
     private void initViews() {
@@ -56,41 +74,17 @@ public class PostcardEditActivity extends AppCompatActivity {
             return;
         }
 
-        PostCard postCard = new PostCard();
-        postCard.setDate(mDateTextView.getText().toString());
-        postCard.setDestination(mDestinationTextView.getText().toString());
-        postCard.setText(mPostcardTextView.getText().toString());
+        mPostcard.setDate(mDateTextView.getText().toString());
+        mPostcard.setDestination(mDestinationTextView.getText().toString());
+        mPostcard.setText(mPostcardTextView.getText().toString());
 
         Intent intent = new Intent();
         Bundle bundle = new Bundle();
-        bundle.putSerializable(BUNDLE_POSTCARD_DATA, postCard);
+        bundle.putSerializable(BUNDLE_POSTCARD_DATA, mPostcard);
         if (bundle != null) {
             intent.putExtras(bundle);
         }
         setResult(RESULT_OK, intent);
         finish();
-    }
-
-    /*@Override
-    public void onBackPressed() {
-        super.onBackPressed();
-       *//* showDialog(getApplicationContext(), getString(R.string.postcard_confirmation_message), new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-               // PostcardEditActivity.this.finish();
-            }
-        });*//*
-    }*/
-
-    public static void showDialog(Context context, String message, DialogInterface.OnClickListener listener) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setMessage(message)
-                .setPositiveButton(android.R.string.yes, listener)
-                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.dismiss();
-                    }
-                });
-        builder.create().show();
     }
 }

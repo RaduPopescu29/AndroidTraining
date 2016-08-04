@@ -7,9 +7,9 @@ import java.io.Serializable;
  */
 public class PostCard implements Serializable {
 
-    String destination;
-    String date;
-    String text;
+    private String destination;
+    private String date;
+    private String text;
 
     public String getDestination() {
         return destination;

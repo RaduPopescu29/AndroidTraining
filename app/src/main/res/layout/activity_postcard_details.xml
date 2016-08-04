@@ -64,51 +64,6 @@
 
         </LinearLayout>
 
-<!--
-        &lt;!&ndash; the editable content of the postcard &ndash;&gt;
-        <RelativeLayout
-            android:visibility="gone"
-            android:id="@+id/ll_postcard_edit_content"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/ll_postcard_buttons"
-            android:layout_below="@+id/img_postcard_photo"
-            android:orientation="vertical">
-
-
-            <EditText
-                android:id="@+id/et_edit_postcard_destination"
-                style="@style/PostcardText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/postcard_content_margin_end"
-                android:layout_marginStart="@dimen/postcard_content_margin_start"
-                android:hint="@string/postcard_details_edit_destination" />
-
-            <EditText
-                android:id="@+id/et_edit_postcard_date"
-                style="@style/PostcardText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/et_edit_postcard_destination"
-                android:layout_marginEnd="@dimen/postcard_content_margin_end"
-                android:layout_marginStart="@dimen/postcard_content_margin_start"
-                android:hint="@string/postcard_details_edit_date" />
-
-            <EditText
-                android:id="@+id/et_postcard_text"
-                style="@style/PostcardText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/et_edit_postcard_date"
-                android:layout_marginEnd="@dimen/postcard_content_margin_end"
-                android:layout_marginStart="@dimen/postcard_content_margin_start"
-                android:layout_marginTop="20dp"
-                android:hint="@string/postcard_details_edit_text"
-                android:scrollbars="vertical" />&ndash;&gt;
-
-        </RelativeLayout>-->
-
         <LinearLayout
             android:id="@+id/ll_postcard_buttons"
             android:layout_width="match_parent"

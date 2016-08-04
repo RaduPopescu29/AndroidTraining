@@ -17,10 +17,12 @@ public class PostcardDetailsActivity extends AppCompatActivity {
 
     private static final int RESULT_CODE_FOR_EDIT = 1;
 
-    TextView mPostcardTextView;
-    TextView mDestinationTextView;
-    TextView mDateTextView;
-    Button mEditBtn;
+    private TextView mPostcardTextView;
+    private TextView mDestinationTextView;
+    private TextView mDateTextView;
+    private Button mEditBtn;
+
+    private PostCard mPostcard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,8 @@ public class PostcardDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_postcard_details);
 
         initViews();
+        initData();
+        displayData();
     }
 
     private void initViews() {
@@ -38,19 +42,34 @@ public class PostcardDetailsActivity extends AppCompatActivity {
 
         // make the TextView scrollable
         mPostcardTextView.setMovementMethod(new ScrollingMovementMethod());
-        //set the destination and the date of the postcard
-        String destination = String.format(getResources().getString(R.string.postcard_details_destination), "Paris");
-        mDestinationTextView.setText(destination);
-        String date = String.format(getResources().getString(R.string.postcard_details_date), "11/11/2015");
-        mDateTextView.setText(date);
-
         mEditBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goodListChapterIntent = new Intent(PostcardDetailsActivity.this, PostcardEditActivity.class);
-                startActivityForResult(goodListChapterIntent, RESULT_CODE_FOR_EDIT);
+                Intent editPostcardIntent = new Intent(PostcardDetailsActivity.this, PostcardEditActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable(PostcardEditActivity.BUNDLE_POSTCARD_DATA, mPostcard);
+                editPostcardIntent.putExtras(bundle);
+                startActivityForResult(editPostcardIntent, RESULT_CODE_FOR_EDIT);
             }
         });
+    }
+
+    private void initData() {
+        mPostcard = new PostCard();
+        mPostcard.setDestination("Paris");
+        mPostcard.setDate("11/11/2015");
+        mPostcard.setText(getResources().getString(R.string.postcard_details_text));
+    }
+
+    /**
+     * Display the date from Postcard object in the specific views
+     */
+    private void displayData() {
+        //set the destination and the date of the postcard
+        String destination = String.format(getResources().getString(R.string.postcard_details_destination), mPostcard.getDestination());
+        mDestinationTextView.setText(destination);
+        String date = String.format(getResources().getString(R.string.postcard_details_date), mPostcard.getDate());
+        mDateTextView.setText(date);
     }
 
     @Override
@@ -59,13 +78,8 @@ public class PostcardDetailsActivity extends AppCompatActivity {
         switch (requestCode) {
             case RESULT_CODE_FOR_EDIT:
                 if (resultCode == RESULT_OK) {
-                    PostCard card = (PostCard) data.getExtras().getSerializable(PostcardEditActivity.BUNDLE_POSTCARD_DATA);
-                    //set the destination and the date of the postcard
-                    String destination = String.format(getResources().getString(R.string.postcard_details_destination), card.getDestination());
-                    mDestinationTextView.setText(destination);
-                    String date = String.format(getResources().getString(R.string.postcard_details_date), card.getDate());
-                    mDateTextView.setText(date);
-                    mPostcardTextView.setText(card.getText());
+                    mPostcard = (PostCard) data.getExtras().getSerializable(PostcardEditActivity.BUNDLE_POSTCARD_DATA);
+                    displayData();
                 }
                 break;
         }
