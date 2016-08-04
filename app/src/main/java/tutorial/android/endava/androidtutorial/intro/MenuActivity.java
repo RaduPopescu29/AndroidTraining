@@ -15,6 +15,7 @@ import java.util.List;
 
 import tutorial.android.endava.androidtutorial.R;
 import tutorial.android.endava.androidtutorial.chapter_activties.ActivitiesActivity;
+import tutorial.android.endava.androidtutorial.chapter_layouts.PostcardActivity;
 import tutorial.android.endava.androidtutorial.chapter_list.TouristTrapActivity;
 import tutorial.android.endava.androidtutorial.chapter_list.PlacesToSeeActivity;
 import tutorial.android.endava.androidtutorial.chapter_photography.PhotographyActivity;
@@ -24,6 +25,11 @@ import tutorial.android.endava.androidtutorial.chapter_photography.PhotographyAc
  */
 public class MenuActivity extends AppCompatActivity {
 
+    public static final int ACTIVITIES_POSITION = 0;
+    public static final int PLACES_TO_SEE_POSITION = 2;
+    public static final int TOURIST_TRAPS_POSITION = 3;
+    public static final int PHOTOGRAPHY_POSITION = 5;
+    public static final int POSTCARDS_POSITION = 1;
 
     private RecyclerView mRecyclerView;
 
@@ -52,21 +58,23 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onItemClick(View view, int position) {
                 switch (position) {
-                    case 0:
+                    case ACTIVITIES_POSITION:
                         Intent activityChapterIntent = new Intent(getContext(), ActivitiesActivity.class);
                         startActivity(activityChapterIntent);
                         break;
-                    case 1:
+                    case POSTCARDS_POSITION:
+                        Intent layoutsChapterIntent = new Intent(getContext(), PostcardActivity.class);
+                        startActivity(layoutsChapterIntent);
                         break;
-                    case 2:
+                    case PLACES_TO_SEE_POSITION:
                         Intent goodListChapterIntent = new Intent(getContext(), PlacesToSeeActivity.class);
                         startActivity(goodListChapterIntent);
                         break;
-                    case 3:
+                    case TOURIST_TRAPS_POSITION:
                         Intent badListChapterIntent = new Intent(getContext(), TouristTrapActivity.class);
                         startActivity(badListChapterIntent);
                         break;
-                    case 5:
+                    case PHOTOGRAPHY_POSITION:
                         Intent photographyIntent = new Intent(getContext(), PhotographyActivity.class);
                         startActivity(photographyIntent);
                         break;
