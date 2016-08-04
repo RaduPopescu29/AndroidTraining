@@ -7,4 +7,6 @@
     <color name="colorItemTitle">#DB680F</color>
     <color name="colorPhotographyBackground">#E0D9C7</color>
     <color name="colorPhotographyOverlay">#847D6B</color>
+
+    <color name="colorPostcardBackground">#E0D9C7</color>
 </resources>
