@@ -43,17 +43,16 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".chapter_photography.PhotographyActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".chapter_layouts.PostcardActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".chapter_layouts.PostcardDetailsActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".chapter_layouts.PostcardEditActivity"
             android:screenOrientation="portrait"
