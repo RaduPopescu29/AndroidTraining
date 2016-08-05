@@ -32,4 +32,8 @@
     <dimen name="postcard_padding_start_end">10dp</dimen>
     <dimen name="postcard_padding_top_bottom">20dp</dimen>
 
+
+    <!-- Maps -->
+    <dimen name="maps_padding">5dp</dimen>
+
 </resources>

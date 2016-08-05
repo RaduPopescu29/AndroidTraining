@@ -26,6 +26,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
         public ViewHolder(View v) {
             super(v);
             mTextView = (TextView) v.findViewById(android.R.id.text1);
+            mTextView.setCompoundDrawablePadding(10);
         }
     }
 
