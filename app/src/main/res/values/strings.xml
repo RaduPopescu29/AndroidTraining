@@ -30,7 +30,8 @@ The boost in mobile computing adds a unique and novel dimension to the applicati
     <string name="snack_bar_message">You have added %s to your favourite places</string>
     <string name="add_marker">Add Marker</string>
     <string name="my_marker">My Marker</string>
-
+    <string name="hint_latitude">Latitude</string>
+    <string name="hint_longitude">Longitude</string>
 
     <string name="button_stop_activity">Stop Activity</string>
     <string name="stop_activity_message">We have stopped the snail!!!!</string>
