@@ -19,6 +19,7 @@ import tutorial.android.endava.androidtutorial.chapter_layouts.PostcardActivity;
 import tutorial.android.endava.androidtutorial.chapter_list.TouristTrapActivity;
 import tutorial.android.endava.androidtutorial.chapter_list.PlacesToSeeActivity;
 import tutorial.android.endava.androidtutorial.chapter_photography.PhotographyActivity;
+import tutorial.android.endava.androidtutorial.chapter_travel.MapsActivity;
 
 /**
  * Created by radpopescu on 7/14/2016.
@@ -28,8 +29,9 @@ public class MenuActivity extends AppCompatActivity {
     public static final int ACTIVITIES_POSITION = 0;
     public static final int PLACES_TO_SEE_POSITION = 2;
     public static final int TOURIST_TRAPS_POSITION = 3;
-    public static final int PHOTOGRAPHY_POSITION = 5;
+    public static final int PHOTOGRAPHY_POSITION = 4;
     public static final int POSTCARDS_POSITION = 1;
+    public static final int TRAVEL_POSITION =5;
 
     private RecyclerView mRecyclerView;
 
@@ -44,7 +46,6 @@ public class MenuActivity extends AppCompatActivity {
         menuList.add(getString(R.string.third_chapter_text));
         menuList.add(getString(R.string.fourth_chapter_text));
         menuList.add(getString(R.string.fifth_chapter_text));
-        menuList.add(getString(R.string.sixth_chapter_text));
         menuList.add(getString(R.string.seventh_chapter_text));
         menuList.add(getString(R.string.eighth_chapter_text));
         menuList.add(getString(R.string.ninth_chapter_text));
@@ -77,6 +78,10 @@ public class MenuActivity extends AppCompatActivity {
                     case PHOTOGRAPHY_POSITION:
                         Intent photographyIntent = new Intent(getContext(), PhotographyActivity.class);
                         startActivity(photographyIntent);
+                        break;
+                    case TRAVEL_POSITION:
+                        Intent travelIntent = new Intent(getContext(), MapsActivity.class);
+                        startActivity(travelIntent);
                         break;
                 }
             }

@@ -27,6 +27,8 @@
     <string name="pause_activity_toast">Your activity has been paused</string>
     <string name="stop_activity_toast">Your activity has been stopped</string>
     <string name="snack_bar_message">You have added %s to your favourite places</string>
+    <string name="add_marker">Add Marker</string>
+    <string name="my_marker">My Marker</string>
 
 
     <string name="button_pause_activity">Pause Activity</string>
@@ -473,7 +475,8 @@
         <item>
             A visit to the Sydney Fish Market is nearly as fatal for tourists as it is for fish.
             Plastic seats on metal stands overlook the dirty and aptly named Blackwattle Bay.
-            Heritage falls apart on the harbor\'s shore, iron rusts and there is no foreshore access.
+            Heritage falls apart on the harbor\'s shore, iron rusts and there is no foreshore
+            access.
             Two huge cement factories that dominate the view around the bay pollute the water.
         </item>
         <item>
@@ -514,4 +517,5 @@
     <string name="postcard_details_save">SAVE</string>
     <string name="postcard_validation_message">Please fill in all the fields!</string>
     <string name="postcard_confirmation_message">Are you sure you want to discard the filled in data?</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
