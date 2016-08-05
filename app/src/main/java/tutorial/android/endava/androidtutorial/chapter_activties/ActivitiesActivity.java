@@ -17,7 +17,7 @@ import tutorial.android.endava.androidtutorial.R;
 public class ActivitiesActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = ActivitiesActivity.class.getSimpleName();
-    public static final String BUNDLE_DATA="bundle_data";
+    public static final String BUNDLE_DATA = "bundle_data";
     private ImageView mCreateView;
     private ImageView mStartView;
     private ImageView mResumeView;
@@ -83,19 +83,19 @@ public class ActivitiesActivity extends AppCompatActivity implements View.OnClic
     }
 
     private void initViews() {
-        mCreateView = (ImageView)findViewById(R.id.create_view);
-        mResumeView = (ImageView)findViewById(R.id.resume_view);
-        mStartView = (ImageView)findViewById(R.id.start_view);
-        mPauseView = (ImageView)findViewById(R.id.pause_view);
-        mStopView = (ImageView)findViewById(R.id.stop_view);
-        findViewById(R.id.pause_activity_button).setOnClickListener(this);
+        mCreateView = (ImageView) findViewById(R.id.create_view);
+        mResumeView = (ImageView) findViewById(R.id.resume_view);
+        mStartView = (ImageView) findViewById(R.id.start_view);
+        mPauseView = (ImageView) findViewById(R.id.pause_view);
+        mStopView = (ImageView) findViewById(R.id.stop_view);
+        findViewById(R.id.stop_activity_button).setOnClickListener(this);
     }
 
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.pause_activity_button:
+            case R.id.stop_activity_button:
                 startPauseActivity();
                 break;
         }
@@ -103,7 +103,7 @@ public class ActivitiesActivity extends AppCompatActivity implements View.OnClic
 
     private void startPauseActivity() {
         Intent intent = new Intent(this, PauseActivity.class);
-        intent.putExtra(BUNDLE_DATA,"We have paused the snail!!!!");
+        intent.putExtra(BUNDLE_DATA, getResources().getString(R.string.stop_activity_message));
         startActivity(intent);
     }
 
