@@ -48,7 +48,6 @@ public class MenuActivity extends AppCompatActivity {
         menuList.add(getString(R.string.fifth_chapter_text));
         menuList.add(getString(R.string.seventh_chapter_text));
         menuList.add(getString(R.string.eighth_chapter_text));
-        menuList.add(getString(R.string.ninth_chapter_text));
         mRecyclerView = (RecyclerView) findViewById(R.id.list_view_menu);
         mRecyclerView.setHasFixedSize(true);
         // use a linear layout manager

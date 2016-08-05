@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import tutorial.android.endava.androidtutorial.R;
+
 /**
  * Created by radpopescu on 7/25/2016.
  */
@@ -48,6 +50,27 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
         holder.mTextView.setText(mDataset.get(position));
+        switch (position){
+            case 0:
+                holder.mTextView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_menu_activities,0,0,0);
+                break;
+            case 1:
+                holder.mTextView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_menu_postcards,0,0,0);
+                break;
+            case 2:
+                holder.mTextView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_menu_places_to_see,0,0,0);
+                break;
+            case 3:
+                holder.mTextView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_menu_tourist_traps,0,0,0);
+                break;
+            case 4:
+                holder.mTextView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_menu_camera,0,0,0);
+                break;
+            case 5:
+                holder.mTextView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_menu_travel,0,0,0);
+                break;
+        }
+
 
     }
 
