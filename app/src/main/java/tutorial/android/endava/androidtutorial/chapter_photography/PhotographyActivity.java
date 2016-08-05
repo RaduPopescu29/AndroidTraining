@@ -30,15 +30,17 @@ import tutorial.android.endava.androidtutorial.R;
 public class PhotographyActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = PhotographyActivity.class.getSimpleName();
+    private static final int RESULT_CODE_TAKE_PHOTO = 10;
+    public static final String ANDROID_TUTORIAL_DIR_NAME = "AndroidTutorial";
     private static final int REQUEST_STORAGE_AND_CAMERA = 1;
     private static final String[] PERMISSIONS_CAMERA_AND_STORAGE = {
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.CAMERA
     };
+
     private File mPhotoFile;
     private ImageView mCapturedImageView;
-    private static final int RESULT_CODE_TAKE_PHOTO = 10;
-    public static final String ANDROID_TUTORIAL_DIR_NAME = "AndroidTutorial";
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

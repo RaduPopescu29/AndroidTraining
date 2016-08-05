@@ -7,17 +7,17 @@
 
     <ImageView
         android:id="@+id/image_container"
-        android:layout_width="270dp"
-        android:layout_height="152dp"
+        android:layout_width="180dp"
+        android:layout_height="270dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"
         android:background="@drawable/drawable_white_background"
         android:padding="2dp"
-        android:scaleType="fitXY" />
+        android:scaleType="centerCrop" />
 
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="180dp"
+        android:layout_width="220dp"
+        android:layout_height="300dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
         android:background="@drawable/ic_tapes" />
