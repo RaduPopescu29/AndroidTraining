@@ -3,6 +3,7 @@
     <extensionMap>
       <mapping pattern="zapp-demo-utils" type="PLAIN_TEXT" />
       <mapping pattern="test" type="PLAIN_TEXT" />
+      <mapping pattern="emptyAsset" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
