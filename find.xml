@@ -1,7 +1,7 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="File 'D:\Projects\BankApp4\zapp-bank-ui-lib\src\main\java\com\zapp\bank\library\ui\activity\ZappActivationActivity.java'" />
-    <option name="defaultScopeName" value="File 'D:\Projects\BankApp4\zapp-bank-ui-lib\src\main\java\com\zapp\bank\library\ui\activity\ZappActivationActivity.java'" />
-    <option name="SEARCH_SCOPE" value="File 'D:\Projects\BankApp4\zapp-bank-ui-lib\src\main\java\com\zapp\bank\library\ui\activity\ZappActivationActivity.java'" />
+    <option name="customScope" value="File 'D:\Projects\BankApp4\zapp-pos-library\src\main\java\com\zapp\library\pos\ZappPaymentApi.java'" />
+    <option name="defaultScopeName" value="File 'D:\Projects\BankApp4\zapp-pos-library\src\main\java\com\zapp\library\pos\ZappPaymentApi.java'" />
+    <option name="SEARCH_SCOPE" value="File 'D:\Projects\BankApp4\zapp-pos-library\src\main\java\com\zapp\library\pos\ZappPaymentApi.java'" />
   </component>
 </application>
