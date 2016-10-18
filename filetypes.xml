@@ -4,6 +4,7 @@
       <mapping pattern="error_encoding_certificate" type="PLAIN_TEXT" />
       <mapping pattern="corrupt_certificate" type="PLAIN_TEXT" />
       <mapping pattern="valid_certificate" type="PLAIN_TEXT" />
+      <mapping pattern="empty_certificate" type="PLAIN_TEXT" />
       <mapping pattern="zapp-demo-utils" type="PLAIN_TEXT" />
       <mapping pattern="invalid_certificate" type="PLAIN_TEXT" />
       <mapping pattern="test" type="PLAIN_TEXT" />
